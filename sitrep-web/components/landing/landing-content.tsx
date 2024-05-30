@@ -4,28 +4,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const testimonials = [
     {
-        name: "Alex",
-        avatar: "A",
-        title: "Software Engineer",
-        description: "This is the BEST application I've ever used for development!"
+        name: "Scours Internet for Daily Financial News",
+        description: "Sit Rep checks all available information including news, social media and more! Saving your valuable time and allowing you to do more with less work!"
     }, 
     {
-        name: "Benjamin",
-        avatar: "B",
-        title: "CEO",
-        description: "This 4Xed my productivity"
+        name: "Generates Personalized Financial Insights",
+        description: "Sit Rep "
     }, 
     {
-        name: "Charlie",
-        avatar: "C",
-        title: "Content Creator",
-        description: "I have been using Sirius for the past 2 months and I can't imagine my life without it!"
-    }, 
-    {
-        name: "David",
-        avatar: "D",
-        title: "Student",
-        description: "Definitely worth the price"
+        name: "Produces Video & Report",
+        description: "Sit Rep produces its report as a video, allowing you to get the latest news on your way to work, or while you have your morning coffee."
     }
 ]
 
@@ -33,25 +21,27 @@ export const LandingContent = () => {
     return (
         <div className="px-10 pb-20">
             <h2 className="text-center text-4xl text-white font-extrabold mb-10">
-                About
+                What Does Sit Rep Do?
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-3 gap-4">
                 {testimonials.map((item) => (
-                    <Card key={item.description} className="bg-[#192339] border-none text-white">
+                    <Card key={item.description} className="bg-[#192339] border-none text-white font-bold">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-x-2">
                                 <div>
                                     <p className="text-lg">{item.name}</p>
-                                    <p className="text-zinc-400 text-sm">{item.title}</p>
                                 </div>
                             </CardTitle>
-                            <CardContent className="pt-4 px-0">
+                            <CardContent className="pt-4 px-0 text-amber-500 text-md justify-center items-center">
                                 {item.description}
                             </CardContent>
                         </CardHeader>
                     </Card>
                 ))}
             </div>
+            <h2 className="text-center pt-20 text-3xl text-yellow-300 font-bold mb-10">
+                Have your Personal News Media Working for You!
+            </h2>
         </div>
     )
 }
