@@ -8,7 +8,7 @@ export const LandingTwo = () => {
     const { isSignedIn } = useAuth();
 
     return (
-        <div className="text-white pb-20 font-bold text-center space-y-5">
+        <div className="text-white pt-20 pb-20 font-bold text-center space-y-5">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl space-y-5 font-bold">
                 <h1>Sit Rep: Your Personal Financial Assistant</h1>
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600">

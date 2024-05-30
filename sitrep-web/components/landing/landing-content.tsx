@@ -19,13 +19,13 @@ const testimonials = [
 
 export const LandingContent = () => {
     return (
-        <div className="px-10 pb-20">
+        <div className="px-10 pb-10">
             <h2 className="text-center text-4xl text-white font-extrabold mb-10">
                 What Does Sit Rep Do?
             </h2>
             <div className="grid grid-cols-3 gap-4">
                 {testimonials.map((item) => (
-                    <Card key={item.description} className="bg-[#192339] border-none text-white font-bold">
+                    <Card key={item.description} className="bg-[#15223c] border-none text-white font-bold">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-x-2">
                                 <div>
@@ -39,9 +39,6 @@ export const LandingContent = () => {
                     </Card>
                 ))}
             </div>
-            <h2 className="text-center pt-20 text-3xl text-yellow-300 font-bold mb-10">
-                Have your Personal News Media Working for You!
-            </h2>
         </div>
     )
 }
