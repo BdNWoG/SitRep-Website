@@ -36,7 +36,7 @@ export const LandingPricing = () => {
                                     <p className="text-zinc-400 text-sm">{item.title}</p>
                                 </div>
                             </CardTitle>
-                            <CardContent className="pt-4 px-0 text-orange-300 text-md flex justify-between items-center">
+                            <CardContent className="pt-4 px-0 text-amber-500 text-md flex justify-between items-center">
                                 {item.description}
                             </CardContent>
                         </CardHeader>

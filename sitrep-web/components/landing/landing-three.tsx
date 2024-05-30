@@ -15,11 +15,11 @@ export const LandingThree = () => {
             </div>
             <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl space-y-5 font-bold">
                 <h1>At Sit Rep, we Understand that</h1>
-                <div className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-red-700">
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
                     Your Time is Money
                 </div>
             </div>
-            <div className="text-xl font-bold text-orange-300">
+            <div className="text-xl font-bold text-amber-500">
                 Keep yourself informed and capitalize on the latest trends! <br/>
                 Start each day with a Bang!
             </div>
