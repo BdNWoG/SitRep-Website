@@ -9,6 +9,10 @@ const SettingsPage = async () => {
             <div className="px-4 lg:px-8 space-y-4">
                 <div className="text-muted-foreground text-sm">
                     You are currently on the Free Plan and the Waitlist for the Pro Plan.
+                </div>
+            </div>
+            <div className="px-4 lg:px-8 space-y-4">
+                <div className="text-muted-foreground text-sm">
                     You will be Able to Upgrade your plan when it is Available.
                 </div>
             </div>
