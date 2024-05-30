@@ -23,10 +23,10 @@ const DashboardPage = () => {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Welcome to Sirius!
+          Welcome to Sit Rep!
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Sirius is an AI-powered tool that can help you find the best solutions to your problems.
+          Sit Rep is an AI-powered tool that can provide you your personalized financial information.
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
