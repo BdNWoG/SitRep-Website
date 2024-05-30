@@ -8,11 +8,18 @@ import { cn } from "@/lib/utils";
 
 const tools = [
   {
+    label: "Latest",
+    icon: MessageSquare,
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+    href: "/latest"
+  },
+  {
     label: "Conversation",
     icon: MessageSquare,
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
-    href: "/conversation"
+    href: "/past"
   },
 ];
 

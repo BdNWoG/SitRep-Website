@@ -18,9 +18,15 @@ const Routes = [
         color: "text-sky-500"
     },
     {
-        label: "Conversation",
+        label: "Latest",
         icon: MessageSquare,
-        href: "/conversation",
+        href: "/latest",
+        color: "text-violet-500"
+    },
+    {
+        label: "Past",
+        icon: MessageSquare,
+        href: "/past",
         color: "text-violet-500"
     },
     {
