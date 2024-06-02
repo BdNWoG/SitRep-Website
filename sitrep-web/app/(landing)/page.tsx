@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, RefObject } from "react";
 import { LandingHero } from "@/components/landing/landing-hero";
 import { LandingNavbar } from "@/components/landing/landing-navbar";
 import { LandingContent } from "@/components/landing/landing-content";
@@ -8,7 +8,7 @@ import { LandingTwo } from "@/components/landing/landing-two";
 import "../styles.css"; // Ensure this path is correct
 
 const LandingPage = () => {
-    const sectionsRef = useRef([]);
+    const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -43,16 +43,17 @@ const LandingPage = () => {
 
     return (
         <div className="h-full">
-            <div ref={(el) => sectionsRef.current[0] = el} className="fade-in">
+            //@ts-ignore
+            <div ref={(el) => {sectionsRef.current[0] = el;}} className="fade-in">
                 <LandingNavbar />
             </div>
-            <div ref={(el) => sectionsRef.current[1] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[1] = el;}} className="fade-in">
                 <LandingHero />
             </div>
-            <div ref={(el) => sectionsRef.current[2] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[2] = el;}} className="fade-in">
                 <LandingContent />
             </div>
-            <div ref={(el) => sectionsRef.current[3] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[3] = el;}} className="fade-in">
                 <LandingTwo />
             </div>
         </div>

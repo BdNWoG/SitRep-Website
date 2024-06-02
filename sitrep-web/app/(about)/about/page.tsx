@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, RefObject } from "react";
 import "@/app/styles.css";
 
 import { LandingThree } from "@/components/landing/landing-three";
@@ -8,7 +8,7 @@ import { LandingPricing } from "@/components/landing/landing-pricing";
 import { AboutNavbar } from "@/components/landing/about-navbar";
 
 const AboutPage = () => {
-    const sectionsRef = useRef([]);
+    const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -43,13 +43,13 @@ const AboutPage = () => {
 
     return (
         <div className="h-full">
-            <div ref={(el) => sectionsRef.current[0] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[0] = el;}} className="fade-in">
                 <AboutNavbar/>
             </div>
-            <div ref={(el) => sectionsRef.current[1] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[1] = el;}} className="fade-in">
                 <LandingThree/>
             </div>
-            <div ref={(el) => sectionsRef.current[2] = el} className="fade-in">
+            <div ref={(el) => {sectionsRef.current[2] = el;}} className="fade-in">
                 <LandingPricing/>
             </div>
         </div>
