@@ -10,12 +10,12 @@ const testimonials = [
     },
     {
         name: "Sergeant",
-        title: "$25 per month.",
-        description: "This plan goes in depth with 10 minutes of daily specific market information based on the portfolio companies you care about and regions you monitor."
+        title: "$20 per month. 7 day free trial.",
+        description: "This plan goes in depth with 8 minutes of daily specific market information based on the portfolio companies you care about and regions you monitor."
     }, 
     {
         name: "General",
-        title: "$80 per month.",
+        title: "$100 per month.",
         description: "This plan provides 25 minutes of daily financial information, containing everything in Sergeant. It goes into the details of your portfolio with the addition of personalized analysis and recommendation. General tracks users financial tendencies and provides specific information for each user, guaranteeing that your report would be unique."
     }
 ]
