@@ -12,7 +12,7 @@ export const LandingTwo = () => {
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl space-y-5 font-bold">
                 <h1>Sit Rep: Your Personal Financial Assistant</h1>
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600">
-                    It's Finance Made Easy
+                    It&apos;s Finance Made Easy
                 </div>
             </div>
             <div className="text-sm md:text-xl font-light text-amber-400">
