@@ -9,14 +9,14 @@ export const userCheck = async () => {
         return;
     }
 
-    const user = await prismadb.User.findUnique({
+    const user = await prismadb.user.findUnique({
         where: {
             userId: userId,
         }
     });
 
     if (!user) {
-        await prismadb.User.create({
+        await prismadb.user.create({
             data: {
                 userId: userId,
             }
