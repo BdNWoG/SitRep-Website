@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef } from "react";
 import { LandingHero } from "@/components/landing/landing-hero";
 import { LandingNavbar } from "@/components/landing/landing-navbar";
 import { LandingContent } from "@/components/landing/landing-content";
@@ -24,36 +24,34 @@ const LandingPage = () => {
             { threshold: 0.1 } // Adjust the threshold as needed
         );
 
-        sectionsRef.current.forEach((section) => {
+        const currentSections = sectionsRef.current;
+        currentSections.forEach((section) => {
             if (section) {
                 observer.observe(section);
             }
         });
 
         return () => {
-            if (sectionsRef.current) {
-                sectionsRef.current.forEach((section) => {
-                    if (section) {
-                        observer.unobserve(section);
-                    }
-                });
-            }
+            currentSections.forEach((section) => {
+                if (section) {
+                    observer.unobserve(section);
+                }
+            });
         };
     }, []);
 
     return (
         <div className="h-full">
-            //@ts-ignore
-            <div ref={(el) => {sectionsRef.current[0] = el;}} className="fade-in">
+            <div ref={(el) => { sectionsRef.current[0] = el; }} className="fade-in">
                 <LandingNavbar />
             </div>
-            <div ref={(el) => {sectionsRef.current[1] = el;}} className="fade-in">
+            <div ref={(el) => { sectionsRef.current[1] = el; }} className="fade-in">
                 <LandingHero />
             </div>
-            <div ref={(el) => {sectionsRef.current[2] = el;}} className="fade-in">
+            <div ref={(el) => { sectionsRef.current[2] = el; }} className="fade-in">
                 <LandingContent />
             </div>
-            <div ref={(el) => {sectionsRef.current[3] = el;}} className="fade-in">
+            <div ref={(el) => { sectionsRef.current[3] = el; }} className="fade-in">
                 <LandingTwo />
             </div>
         </div>

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef } from "react";
 import "@/app/styles.css";
 
 import { LandingThree } from "@/components/landing/landing-three";
@@ -24,33 +24,32 @@ const AboutPage = () => {
             { threshold: 0.1 } // Adjust the threshold as needed
         );
 
-        sectionsRef.current.forEach((section) => {
+        const currentSections = sectionsRef.current;
+        currentSections.forEach((section) => {
             if (section) {
                 observer.observe(section);
             }
         });
 
         return () => {
-            if (sectionsRef.current) {
-                sectionsRef.current.forEach((section) => {
-                    if (section) {
-                        observer.unobserve(section);
-                    }
-                });
-            }
+            currentSections.forEach((section) => {
+                if (section) {
+                    observer.unobserve(section);
+                }
+            });
         };
     }, []);
 
     return (
         <div className="h-full">
-            <div ref={(el) => {sectionsRef.current[0] = el;}} className="fade-in">
-                <AboutNavbar/>
+            <div ref={(el) => { sectionsRef.current[0] = el; }} className="fade-in">
+                <AboutNavbar />
             </div>
-            <div ref={(el) => {sectionsRef.current[1] = el;}} className="fade-in">
-                <LandingThree/>
+            <div ref={(el) => { sectionsRef.current[1] = el; }} className="fade-in">
+                <LandingThree />
             </div>
-            <div ref={(el) => {sectionsRef.current[2] = el;}} className="fade-in">
-                <LandingPricing/>
+            <div ref={(el) => { sectionsRef.current[2] = el; }} className="fade-in">
+                <LandingPricing />
             </div>
         </div>
     );
