@@ -24,6 +24,13 @@ export const LandingNavbar = () => {
                 </h1>
             </Link>
             <div className="flex items-center gap-x-2">
+                <Link href="/about">
+                    <Button variant="outline" className="rounded-full">
+                        About
+                    </Button>
+                </Link>
+            </div>
+            <div className="flex items-center gap-x-2">
                 <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
                     <Button variant="outline" className="rounded-full">
                         Get Started
