@@ -2,8 +2,6 @@ import { LandingHero } from "@/components/landing/landing-hero";
 import { LandingNavbar } from "@/components/landing/landing-navbar";
 import { LandingContent } from "@/components/landing/landing-content";
 import { LandingTwo } from "@/components/landing/landing-two";
-import { LandingThree } from "@/components/landing/landing-three";
-import { LandingPricing } from "@/components/landing/landing-pricing";
 
 const LandingPage = () => {
     return (
@@ -11,8 +9,6 @@ const LandingPage = () => {
             <LandingNavbar/>
             <LandingHero/>
             <LandingContent/>
-            <LandingThree/>
-            <LandingPricing/>
             <LandingTwo/>
         </div> 
     );

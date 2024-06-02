@@ -10,7 +10,7 @@ import { Button} from "../ui/button";
 
 const font = Montserrat({weight:"600", subsets:["latin"]});
 
-export const LandingNavbar = () => {
+export const AboutNavbar = () => {
     const { isSignedIn } = useAuth();  
 
     return (
@@ -24,9 +24,9 @@ export const LandingNavbar = () => {
                 </h1>
             </Link>
             <div className="flex items-center gap-x-2">
-                <Link href="/about">
+                <Link href="/">
                     <h1 className="text-xl font-bold text-white underline">
-                        About
+                        Home
                     </h1>
                 </Link>
             </div>
