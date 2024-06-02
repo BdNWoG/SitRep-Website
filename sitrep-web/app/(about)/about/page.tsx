@@ -6,6 +6,7 @@ import "@/app/styles.css";
 import { LandingThree } from "@/components/landing/landing-three";
 import { LandingPricing } from "@/components/landing/landing-pricing";
 import { AboutNavbar } from "@/components/landing/about-navbar";
+import { AboutContent } from "@/components/landing/about-content";
 
 const AboutPage = () => {
     const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -49,6 +50,9 @@ const AboutPage = () => {
                 <LandingThree />
             </div>
             <div ref={(el) => { sectionsRef.current[2] = el; }} className="fade-in">
+                <AboutContent />
+            </div>
+            <div ref={(el) => { sectionsRef.current[3] = el; }} className="fade-in">
                 <LandingPricing />
             </div>
         </div>
