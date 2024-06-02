@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-import { MessageSquare } from "lucide-react";
+import { Calendar, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Heading } from "@/components/heading";
@@ -12,8 +12,8 @@ const PastPage = () => {
     return (
         <div>
             <Heading
-                title="Conversation" description="This is the conversation page for the AI." 
-                icon={MessageSquare} iconColor="text-violet-500" bgColor="bg-violet-500/10"/>
+                title="Past" description="This is the conversation page for the AI." 
+                icon={Calendar} iconColor="text-purple-700" bgColor="bg-purple-700/10"/>
             <div className="px-4 lg:px-8">
                 <div className="text-muted-foreground text-sm">
                     This is the conversation page for the AI. 

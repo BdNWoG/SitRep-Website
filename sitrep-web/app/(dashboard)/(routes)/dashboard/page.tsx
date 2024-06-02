@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import { ArrowRight, Calendar, Code, ImageIcon, MessageSquare, Music, Newspaper, Settings, VideoIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Card } from "@/components/ui/card";
@@ -9,17 +9,24 @@ import { cn } from "@/lib/utils";
 const tools = [
   {
     label: "Latest",
-    icon: MessageSquare,
-    color: "text-violet-500",
-    bgColor: "bg-violet-500/10",
+    icon: Newspaper,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10",
     href: "/latest"
   },
   {
-    label: "Conversation",
-    icon: MessageSquare,
-    color: "text-violet-500",
-    bgColor: "bg-violet-500/10",
+    label: "Past",
+    icon: Calendar,
+    color: "text-purple-700",
+    bgColor: "bg-purple-700/10",
     href: "/past"
+  },
+  {
+    label: "Settings",
+    icon: Settings,
+    color: "text-grey-700",
+    bgColor: "bg-grey-700/10",
+    href: "/settings"
   },
 ];
 
