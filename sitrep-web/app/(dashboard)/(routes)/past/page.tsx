@@ -28,7 +28,8 @@ const PastPage = () => {
 
     const handleDayClick = (day: Date) => {
         const formattedDate = day.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
-        router.push(`/date/${formattedDate}`);
+        router.push('/latest')
+        //router.push(`/date/${formattedDate}`);
     };
 
     const handlePreviousMonth = () => {
