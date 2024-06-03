@@ -9,8 +9,15 @@ import { Heading } from "@/components/heading";
 // Function to generate an array of days for a given month and year
 const generateCalendarDays = (year: number, month: number) => {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
     const days = [];
 
+    // Fill in the days from the previous month to align the first day of the current month correctly
+    for (let i = 0; i < firstDayOfMonth; i++) {
+        days.push(null);
+    }
+
+    // Add the days for the current month
     for (let day = 1; day <= daysInMonth; day++) {
         days.push(new Date(year, month, day));
     }
@@ -28,8 +35,7 @@ const PastPage = () => {
 
     const handleDayClick = (day: Date) => {
         const formattedDate = day.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
-        router.push('/latest')
-        //router.push(`/date/${formattedDate}`);
+        router.push(`/date/${formattedDate}`);
     };
 
     const handlePreviousMonth = () => {
@@ -88,15 +94,19 @@ const PastPage = () => {
                         ))}
                     </div>
                     <div className="grid grid-cols-7 gap-2">
-                        {days.map((day) => (
-                            <button
-                                key={day.toISOString()}
-                                onClick={() => handleDayClick(day)}
-                                className={`p-2 border rounded ${isDateDisabled(day) ? 'bg-gray-300 cursor-not-allowed' : 'hover:bg-purple-100'}`}
-                                disabled={isDateDisabled(day)}
-                            >
-                                {day.getDate()}
-                            </button>
+                        {days.map((day, index) => (
+                            day ? (
+                                <button
+                                    key={day.toISOString()}
+                                    onClick={() => handleDayClick(day)}
+                                    className={`p-2 border rounded ${isDateDisabled(day) ? 'bg-gray-300 cursor-not-allowed' : 'hover:bg-purple-100'}`}
+                                    disabled={isDateDisabled(day)}
+                                >
+                                    {day.getDate()}
+                                </button>
+                            ) : (
+                                <div key={index} className="p-2"></div>
+                            )
                         ))}
                     </div>
                 </div>
