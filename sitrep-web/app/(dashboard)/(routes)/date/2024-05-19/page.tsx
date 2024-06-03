@@ -6,9 +6,8 @@ import { useRouter } from "next/navigation";
 
 import { Heading } from "@/components/heading";
 
-const LatestPage = () => {
+const NineteenPage = () => {
     const router = useRouter();
-    const { dayOfWeek, month, date } = getCurrentDateInfo();
 
     return (
         <div>
@@ -22,7 +21,7 @@ const LatestPage = () => {
             <div className="px-4 lg:px-8">
                 <div className="text-muted-foreground text-sm">
                     <h2 className="text-xl font-bold text-black pb-10">
-                        {`This is your latest Sit Rep for today, ${dayOfWeek}, ${month} ${date}`}
+                        {`This is your Sit Rep for Sunday, May 19, 2024`}
                     </h2>
                     <div className="flex justify-center">
                         <div className="aspect-w-16 aspect-h-9">
@@ -43,20 +42,4 @@ const LatestPage = () => {
     );
 }
 
-export default LatestPage;
-
-const getCurrentDateInfo = () => {
-    const currentDate = new Date();
-
-    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const monthsOfYear = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ];
-
-    const dayOfWeek = daysOfWeek[currentDate.getDay()];
-    const month = monthsOfYear[currentDate.getMonth()];
-    const date = currentDate.getDate();
-
-    return { dayOfWeek, month, date };
-};
+export default NineteenPage;

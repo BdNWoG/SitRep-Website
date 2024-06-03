@@ -22,14 +22,14 @@ const LatestPage = () => {
             <div className="px-4 lg:px-8">
                 <div className="text-muted-foreground text-sm">
                     <h2 className="text-xl font-bold text-black pb-10">
-                        {`This is your latest Sit Rep for today, ${dayOfWeek}, ${month} ${date}`}
+                        {`This is your latest Sit Rep for today, ${dayOfWeek}, ${month} ${date}, 2024`}
                     </h2>
                     <div className="flex justify-center">
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
                                 width="960"
                                 height="540"
-                                src="https://www.youtube.com/embed/S28SAhhA4XU"
+                                src="https://www.youtube.com/embed/-XvvXWwBKXM"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
