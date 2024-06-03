@@ -32,7 +32,8 @@ export const LandingContent = () => {
                                     <p className="text-xl">{item.name}</p>
                                 </div>
                             </CardTitle>
-                            <CardContent className="pt-4 px-0 text-amber-500 text-md flex justify-between items-center">
+                            <CardContent className="pt-4 px-0 text-amber-500 text-md flex justify-between items-center"
+                            style={{ textAlign: 'justify' }}>
                                 {item.description}
                             </CardContent>
                         </CardHeader>
