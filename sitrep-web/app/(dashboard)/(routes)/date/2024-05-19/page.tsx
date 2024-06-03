@@ -28,7 +28,7 @@ const NineteenPage = () => {
                             <iframe
                                 width="960"
                                 height="540"
-                                src="https://www.youtube.com/embed/S28SAhhA4XU"
+                                src="https://www.youtube.com/embed/CdRCX8_yxgA"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
