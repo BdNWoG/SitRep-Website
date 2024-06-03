@@ -65,7 +65,8 @@ const PastPage = () => {
 
     const isDateDisabled = (day: Date) => {
         const may15th = new Date(2024, 4, 15); // Year 2024, Month 4 (May), Day 15
-        return day < may15th || day > today;
+        const may21st = new Date(2024, 4, 21); // Year 2024, Month 4 (May), Day 15
+        return day < may15th || day > may21st;
     };
 
     return (
